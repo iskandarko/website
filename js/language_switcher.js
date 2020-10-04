@@ -1,6 +1,7 @@
+var globalLanguage = "en";
+
 function switchLanguage(language) {
-    console.log('switching language...');
-    var allStrings = document.querySelectorAll('[localized]');
+    let allStrings = document.querySelectorAll('[localized]');
 
     for (let i = 0; i < allStrings.length; i++) {
         let string = allStrings[i];
@@ -11,7 +12,9 @@ function switchLanguage(language) {
             !isHidden(string) && hide(string);
         }
     }
+    globalLanguage = globalLanguage === "en" ? "ru" : "en";
 }
+
 
 function isHidden(element) {
     return element.classList.contains('hidden');

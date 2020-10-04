@@ -1,6 +1,28 @@
 $(function() {
+  handleFormIn("en");
+  handleFormIn("ru");
+});
 
-  $("#contactForm input#name, #contactForm input#email, #contactForm textarea").jqBootstrapValidation({
+
+function handleFormIn(formLang) {
+  let formName = "#contactForm_" + formLang;
+  let inputName = "input#name_" + formLang;
+  let inputEmail = "input#email_" + formLang;
+  let inputPhone = "input#phone_" + formLang;
+  let textareaMessage = "textarea#message_" + formLang;
+  let alertMessage = "#success_" + formLang;
+  let alertSending = formLang === "en" ? "<strong>Sending... </strong>" : "<strong>Отправляется... </strong>";
+  let alertSent = formLang === "en" ? "<strong>Your message has been sent. </strong>" : "<strong>Ваше сообщение отправлено. </strong>";
+
+  let alertErrorSending = function(senderName) {
+    if (formLang === "en") {
+      return "Sorry " + senderName + ", it seems that my mail server is not responding. Please try again later!"
+    } else {
+      return "Простите, " + senderName + ", мой почтовый сервер сейчас недоступен. Пожалуйста, попробуйте еще раз позже!"
+    }
+  }
+
+  $(formName + " " + inputName  + " , " + formName + " " + inputEmail + ", " + formName + " " + textareaMessage).jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
       // additional error messages or events
@@ -9,16 +31,16 @@ $(function() {
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
       let person = new Object();
-      person.name = $("input#name").val();
-      person.email = $("input#email").val();
-      person.phone = $("input#phone").val();
-      person.message = $("textarea#message").val();
+      person.name = $(inputName).val();
+      person.email = $(inputEmail).val();
+      person.phone = $(inputPhone).val();
+      person.message = $(textareaMessage).val();
       let firstName = person.name; // For Success/Failure Message
       // Check for white space in name for Success/Fail message
       if (firstName.indexOf(' ') >= 0) {
         firstName = name.split(' ').slice(0, -1).join(' ');
       }
-      $this = $("#sendMessageButton");
+      $this = $("#sendMessageButton_" + formLang);
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
         url: "https://formspree.io/xjvpkble",
@@ -28,35 +50,36 @@ $(function() {
         data: person,
         cache: false,
         beforeSend: function() {
-          $('#success').html("<div class='alert alert-success'>");
-          $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+          $(alertMessage).html("<div class='alert alert-success'>");
+          $(alertMessage + ' > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
-          $('#success > .alert-success')
-            .append("<strong>Sending... </strong>");
-          $('#success > .alert-success')
+          $(alertMessage + ' > .alert-success')
+            .append(alertSending);
+          $(alertMessage + ' > .alert-success')
             .append('</div>');
         },
         success: function() {
           // Success message
-          $('#success').html("<div class='alert alert-success'>");
-          $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+          $(alertMessage).html("<div class='alert alert-success'>");
+          $(alertMessage + ' > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
-          $('#success > .alert-success')
-            .append("<strong>Your message has been sent. </strong>");
-          $('#success > .alert-success')
+          $(alertMessage + ' > .alert-success')
+            .append(alertSent);
+          $(alertMessage + ' > .alert-success')
             .append('</div>');
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $(formName).trigger("reset");
         },
         error: function() {
           // Fail message
-          $('#success').html("<div class='alert alert-danger'>");
-          $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+          $(alertMessage).html("<div class='alert alert-danger'>");
+          $(alertMessage + ' > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
-          $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that my mail server API is not responding. Please try again later!"));
-          $('#success > .alert-danger').append('</div>');
+          $(alertMessage + ' > .alert-danger')
+            .append($("<strong>").text(alertErrorSending(firstName)));
+          $(alertMessage + ' > .alert-danger').append('</div>');
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $(formName).trigger("reset");
         },
         complete: function() {
           setTimeout(function() {
@@ -74,9 +97,11 @@ $(function() {
     e.preventDefault();
     $(this).tab("show");
   });
-});
+}
+
 
 /*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
-  $('#success').html('');
-});
+// $("input#name").focus(function() {
+//   $("#success").html('');
+// });
+
