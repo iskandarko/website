@@ -1,5 +1,3 @@
-var globalLanguage = "en";
-
 function switchLanguage(language) {
     let allStrings = document.querySelectorAll('[localized]');
 
@@ -12,7 +10,7 @@ function switchLanguage(language) {
             !isHidden(string) && hide(string);
         }
     }
-    globalLanguage = globalLanguage === "en" ? "ru" : "en";
+    document.documentElement.lang = language;  
 }
 
 

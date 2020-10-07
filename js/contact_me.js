@@ -23,6 +23,7 @@ function handleFormIn(formLang) {
   }
 
   $(formName + " " + inputName  + " , " + formName + " " + inputEmail + ", " + formName + " " + textareaMessage).jqBootstrapValidation({
+    emailNotValidMessage: formLang === "en" ? "Not a valid email address" : "Невалидный адрес email",
     preventSubmit: true,
     submitError: function($form, event, errors) {
       // additional error messages or events

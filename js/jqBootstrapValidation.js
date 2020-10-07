@@ -8,12 +8,14 @@
  * http://ReactiveRaven.github.com/jqBootstrapValidation/
  */
 
+
 (function($) {
 
   var createdElements = [];
 
   var defaults = {
     options: {
+      emailNotValidMessage: "",
       prependExistingHelpBlock: false,
       sniffHtml: true, // sniff for 'required', 'maxlength', etc
       preventSubmit: true, // stop the form submit event from firing if validation fails
@@ -32,7 +34,7 @@
       init: function(options) {
 
         var settings = $.extend(true, {}, defaults);
-
+        
         settings.options = $.extend(true, settings.options, options);
 
         var $siblingElements = this;
@@ -183,7 +185,7 @@
             //                                                     EMAIL
             // ---------------------------------------------------------
             if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "email") {
-              message = "Not a valid email address<!-- data-validator-validemail-message to override -->";
+              message = settings.options.emailNotValidMessage + " <!-- data-validator-validemail-message to override -->";
               if ($this.data("validationValidemailMessage")) {
                 message = $this.data("validationValidemailMessage");
               } else if ($this.data("validationEmailMessage")) {
