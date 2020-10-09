@@ -51,24 +51,24 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="#home" localized en>Home</a>
-              <a class="nav-link js-scroll-trigger active hidden" href="#home" localized ru>Домой</a>
+              <a class="nav-link js-scroll-trigger active hidden" href="#home" localized en>Home</a>
+              <a class="nav-link js-scroll-trigger active" href="#home" localized ru>Домой</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about" localized en>About</a>
-              <a class="nav-link js-scroll-trigger hidden" href="#about" localized ru>Обо мне</a>
+              <a class="nav-link js-scroll-trigger hidden" href="#about" localized en>About</a>
+              <a class="nav-link js-scroll-trigger" href="#about" localized ru>Обо мне</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio" localized en>Portfolio</a>
-              <a class="nav-link js-scroll-trigger hidden" href="#portfolio" localized ru>Портфолио</a>
+              <a class="nav-link js-scroll-trigger hidden" href="#portfolio" localized en>Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio" localized ru>Портфолио</a>
             </li>
 			      <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact" localized en>Contact</a>
-              <a class="nav-link js-scroll-trigger hidden" href="#contact" localized ru>Контакты</a>
+              <a class="nav-link js-scroll-trigger hidden" href="#contact" localized en>Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#contact" localized ru>Контакты</a>
             </li>
             <li class="nav-item">
-              <span onclick="switchLanguage('en')" class="hidden" localized ru><a class="nav-link" href="#en"><i class="fa fa-language"></i>English</a></span>
-              <span onclick="switchLanguage('ru')" localized en><a class="nav-link" href="#ru"><i class="fa fa-language"></i>Русский</a></span>
+              <span onclick="switchLanguage('en')" localized ru><a class="nav-link" href="#en"><i class="fa fa-language"></i>English</a></span>
+              <span onclick="switchLanguage('ru')" class="hidden" localized en><a class="nav-link" href="#ru"><i class="fa fa-language"></i>Русский</a></span>
             </li>
           </ul>
         </div>
@@ -76,7 +76,7 @@
     </nav>
 	
 	<section id="home" class="main-banner parallaxie" style="background: url('uploads/banner-01.jpg')">
-		<div class="heading" localized en>
+		<div class="heading hidden" localized en>
 			<!-- <h1>Hello!</h1> -->
 			<h3 class="cd-headline clip is-full-width">
 				<span>I do  </span>
@@ -89,7 +89,7 @@
 			</h3>
 			<p>"Software Development is a passion <br>that has evolved into my profession"</p>
 		</div>
-		<div class="heading hidden" localized ru>
+		<div class="heading" localized ru>
 			<!-- <h1>Добрый день!</h1> -->
 			<h3 class="cd-headline clip is-full-width">
 				<span>Я занимаюсь  </span>
@@ -108,8 +108,8 @@
       <div class="container">
           <div class="row">
               <div class="col-md-7">
-                  <div class="message-box" localized en>                        
-                      <h2 localized en>Hi, I'm Iskandar.</h2>
+                  <div class="message-box hidden" localized en>                        
+                      <h2>Hi, I'm Iskandar.</h2>
                       <p>
                         I'm a software developer based in Moscow. 
                         <br>  
@@ -126,7 +126,7 @@
                       </p>
                       <a href="#" class="sim-btn btn-hover-new" data-text="Download CV"><span>Download CV</span></a>
                   </div>
-                  <div class="message-box hidden" localized ru>                        
+                  <div class="message-box" localized ru>                        
                       <h2>Привет, я Искандар.</h2>
                       <p>
                         Я разработчик ПО из Москвы.
@@ -156,11 +156,11 @@
 	
 	<div id="portfolio" class="section lb">
 		<div class="container">
-			<div class="section-title text-left" localized en>
+			<div class="section-title text-left hidden" localized en>
         <h3>Portfolio</h3>
         <p>My most recent works.</p>
       </div>
-			<div class="section-title text-left hidden" localized ru>
+			<div class="section-title text-left" localized ru>
         <h3>Портфолио</h3>
         <p>Мои недавние работы.</p>
       </div>
@@ -196,7 +196,7 @@
             </div>
           </div>
           <div class="col-md-7">
-            <div class="card-body" localized en>
+            <div class="card-body hidden" localized en>
               <h3 class="card-title">PomodoroManager</h3>
               <p class="card-text">
                 PomodoroManager is a simple time management app that is based on the famous pomodoro technique. 
@@ -205,7 +205,7 @@
               </p>
               <a href="https://iskandarko.github.io/PomodoroManager/">Try it out</a>
             </div>
-            <div class="card-body hidden" localized ru>
+            <div class="card-body" localized ru>
               <h3 class="card-title">PomodoroManager</h3>
               <p class="card-text">
                 PomodoroManager - это простое приложение для тайм-менеджмента, которое основано на знаменитой
@@ -223,11 +223,11 @@
 
     <div id="contact" class="section db">
         <div class="container">
-            <div class="section-title text-left" localized en>
+            <div class="section-title text-left hidden" localized en>
                 <h3>Contact me</h3>
                 <p>Feel free to drop me a mail.</p>
             </div>
-            <div class="section-title text-left hidden" localized ru>
+            <div class="section-title text-left" localized ru>
                 <h3>Контакты</h3>
                 <p>Отправьте мне письмо.</p>
             </div>
@@ -236,7 +236,7 @@
                 <div class="col-md-12">
                     <div class="contact_form">
                         <!-- <div id="message_en"></div> -->
-                          <form id="contactForm_en" name="sentMessage" novalidate="novalidate" localized en>
+                          <form id="contactForm_en" name="sentMessage" novalidate="novalidate" class="hidden" localized en>
                             <div class="row">
                               <div class="col-md-6">
                                 <div class="form-group">
@@ -266,7 +266,7 @@
                             </div>
                           </form>
 
-                          <form id="contactForm_ru" name="sentMessage" novalidate="novalidate" class="hidden" localized ru>
+                          <form id="contactForm_ru" name="sentMessage" novalidate="novalidate" localized ru>
                             <div class="row">
                               <div class="col-md-6">
                                 <div class="form-group">
@@ -330,7 +330,7 @@
     <!-- Language Switcher -->
     <script src="js/language_switcher.js"></script>
     <!-- Switching language based on location -->
-    <script src="js/languageBasedOnLocation.js"></script>
+    <script src="js/languageAutoChoose.js"></script>
 
 </body>
 </html>

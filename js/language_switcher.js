@@ -1,18 +1,20 @@
 function switchLanguage(language) {
-    let allStrings = document.querySelectorAll('[localized]');
-
-    for (let i = 0; i < allStrings.length; i++) {
-        let string = allStrings[i];
-
-        if (isInChosenLanguage(string, language)) {
-            isHidden(string) && unhide(string);
-        } else {
-            !isHidden(string) && hide(string);
+    if (language === "ru" || language === "en") {
+        let allStrings = document.querySelectorAll('[localized]');
+    
+        for (let i = 0; i < allStrings.length; i++) {
+            let string = allStrings[i];
+            if (isInChosenLanguage(string, language)) {
+                isHidden(string) && unhide(string);
+            } else {
+                !isHidden(string) && hide(string);
+            }
         }
+        document.documentElement.lang = language;  
+    } else {
+        console.log(language + " language is nor supported!");
     }
-    document.documentElement.lang = language;  
 }
-
 
 function isHidden(element) {
     return element.classList.contains('hidden');
