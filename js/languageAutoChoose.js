@@ -1,4 +1,8 @@
-userSpeaksRussian() ? switchLanguage("ru") : switchLanguage("en");
+window.onload(init());
+
+function init() {
+  userSpeaksRussian() ? switchLanguage("ru") : switchLanguage("en");
+}
 
 function userSpeaksRussian() {
     if (navigator.languages && navigator.languages.length) {

@@ -147,6 +147,9 @@ a,
     -ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    padding: .155rem .75rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
 }
 
 .btn-custom {
@@ -2443,9 +2446,9 @@ select.mobile-device {
     margin-left: 15px;
 }
 
-.btn {
+/* .btn {
     border: 0 !important;
-}
+} */
 
 .btn-light {
     padding: 10px 40px;

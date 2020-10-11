@@ -45,14 +45,13 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
           <i class="fa fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse mr-5" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active hidden" href="#home" localized en>Home</a>
-              <a class="nav-link js-scroll-trigger active" href="#home" localized ru>Домой</a>
+              <a class="nav-link js-scroll-trigger hidden" href="#home" localized en>Home</a>
+              <a class="nav-link js-scroll-trigger" href="#home" localized ru>Домой</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger hidden" href="#about" localized en>About</a>
@@ -66,12 +65,14 @@
               <a class="nav-link js-scroll-trigger hidden" href="#contact" localized en>Contact</a>
               <a class="nav-link js-scroll-trigger" href="#contact" localized ru>Контакты</a>
             </li>
-            <li class="nav-item">
-              <span onclick="switchLanguage('en')" localized ru><a class="nav-link" href="#en"><i class="fa fa-language"></i>English</a></span>
-              <span onclick="switchLanguage('ru')" class="hidden" localized en><a class="nav-link" href="#ru"><i class="fa fa-language"></i>Русский</a></span>
-            </li>
           </ul>
         </div>
+        <ul class="navbar-nav text-uppercase">
+          <li class="nav-item">
+            <button onclick="switchLanguage('en')" class="btn btn-outline-light my-2 my-sm-0" localized ru><i class="fa fa-language"></i>ENGLISH</button>
+            <button onclick="switchLanguage('ru')" class="btn btn-outline-light my-2 my-sm-0 hidden" localized en><i class="fa fa-language"></i>РУССКИЙ</button>
+          </li>
+        </ul>
       </div>
     </nav>
 	
@@ -90,7 +91,6 @@
 			<p>"Software Development is a passion <br>that has evolved into my profession"</p>
 		</div>
 		<div class="heading" localized ru>
-			<!-- <h1>Добрый день!</h1> -->
 			<h3 class="cd-headline clip is-full-width">
 				<span>Я занимаюсь  </span>
 				<span class="cd-words-wrapper">
@@ -327,9 +327,8 @@
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
     <script src="js/jquery.vide.js"></script>
-    <!-- Language Switcher -->
+    <!-- Language -->
     <script src="js/language_switcher.js"></script>
-    <!-- Switching language based on location -->
     <script src="js/languageAutoChoose.js"></script>
 
 </body>
