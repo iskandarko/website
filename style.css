@@ -147,8 +147,9 @@ a,
     -ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    padding: .155rem .75rem;
+    padding: .3rem .6rem;
     font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
     font-size: 14px;
 }
 
