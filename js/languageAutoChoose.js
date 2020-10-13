@@ -1,4 +1,4 @@
-window.onload(init());
+window.onload = init;
 
 function init() {
   userSpeaksRussian() ? switchLanguage("ru") : switchLanguage("en");

@@ -15,7 +15,6 @@
 @import url(css/animate.css);
 @import url(css/camera.css);
 @import url(css/flaticon.css);
-@import url(css/prettyPhoto.css);
 @import url(css/owl.carousel.css);
 @import url(css/font-awesome.min.css);
 
@@ -2028,8 +2027,6 @@ select.mobile-device {
     opacity: 0;
 }
 
-
-/*# sourceMappingURL=bootstrap-select.css.map */
 
 .bootstrap-select > .btn {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
