@@ -22,7 +22,8 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Modernizr -->
-	  <script src="js/modernizr.js"></script> 
+    <script src="js/modernizr.js"></script> 
+    <script src="https://kit.fontawesome.com/8a4982f61c.js" crossorigin="anonymous"></script>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -49,27 +50,51 @@
         <div class="collapse navbar-collapse mr-5" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger hidden" href="#home" localized en>Home</a>
-              <a class="nav-link js-scroll-trigger" href="#home" localized ru>Домой</a>
+              <a class="nav-link js-scroll-trigger" href="#home">
+                <span class="hidden" localized en>
+                  Home
+                </span>
+                <span localized ru>
+                  Домой
+                </span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger hidden" href="#about" localized en>About</a>
-              <a class="nav-link js-scroll-trigger" href="#about" localized ru>Обо мне</a>
+              <a class="nav-link js-scroll-trigger" href="#about">
+                <span class="hidden" localized en>
+                  About
+                </span>
+                <span localized ru>
+                  Обо мне
+                </span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger hidden" href="#portfolio" localized en>Portfolio</a>
-              <a class="nav-link js-scroll-trigger" href="#portfolio" localized ru>Портфолио</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">
+                <span class="hidden" localized en>
+                  Portfolio
+                </span>
+                <span localized ru>
+                  Портфолио
+                </span>
+              </a>
             </li>
 			      <li class="nav-item">
-              <a class="nav-link js-scroll-trigger hidden" href="#contact" localized en>Contact</a>
-              <a class="nav-link js-scroll-trigger" href="#contact" localized ru>Контакты</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">
+                <span class="hidden" localized en>
+                  Contact
+                </span>
+                <span localized ru>
+                  Контакты
+                </span>
+              </a>
             </li>
           </ul>
         </div>
         <ul class="navbar-nav text-uppercase">
           <li class="nav-item">
-            <button onclick="switchLanguage('en')" class="btn btn-outline-light my-2 my-sm-0" localized ru><i class="fa fa-language mr-1"></i>EN</button>
-            <button onclick="switchLanguage('ru')" class="btn btn-outline-light my-2 my-sm-0 hidden" localized en><i class="fa fa-language mr-1"></i>РУС</button>
+            <button onclick="switchLanguage('en')" class="btn btn-outline-light my-2 my-sm-0" localized ru><i class="fas fa-language mr-1"></i>EN</button>
+            <button onclick="switchLanguage('ru')" class="btn btn-outline-light my-2 my-sm-0 hidden" localized en><i class="fas fa-language mr-1"></i>РУС</button>
           </li>
         </ul>
       </div>
@@ -143,8 +168,8 @@
                       <a href="#" class="sim-btn btn-hover-new" data-text="Скачать резюме"><span>Скачать резюме</span></a>
                   </div>
               </div>
-              <div class="col-6 col-md-5 m-auto">
-                <div class="right-box-pro wow fadeIn mb-4">
+              <div class="col-8 col-md-5 m-auto">
+                <div class="right-box-pro mb-4">
                     <img src="uploads/about.jpeg" alt="a photo of Iskandar" class="img-fluid">
                 </div>
               </div>
