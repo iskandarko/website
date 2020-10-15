@@ -32,19 +32,7 @@
 	.section-title p{
 		font-size: 14px;
 	}
-	#clouds{
-		margin-top: -35%;
-	}
 	.message-box{
-		margin-bottom: 30px;
-	}
-	.filter-button-group button{
-		padding: 12px 27px;
-	}
-	.filter-button-group{
-		text-align: center !important;
-	}
-	.post-box{
 		margin-bottom: 30px;
 	}
 	.footer-distributed .footer-left{
@@ -80,19 +68,7 @@
 	.section-title p{
 		font-size: 14px;
 	}
-	#clouds{
-		margin-top: -35%;
-	}
 	.message-box{
-		margin-bottom: 30px;
-	}
-	.filter-button-group button{
-		padding: 12px 27px;
-	}
-	.filter-button-group{
-		text-align: center !important;
-	}
-	.post-box{
 		margin-bottom: 30px;
 	}
 	.footer-distributed .footer-left{
@@ -128,20 +104,11 @@
 	.section-title p{
 		font-size: 14px;
 	}
-	#clouds{
-		margin-top: -35%;
-	}
 	.message-box{
 		margin-bottom: 30px;
 	}
 	.filter-button-group button{
 		padding: 12px 27px;
-	}
-	.filter-button-group{
-		text-align: center !important;
-	}
-	.post-box{
-		margin-bottom: 30px;
 	}
 	.footer-distributed .footer-left{
 		text-align: center;

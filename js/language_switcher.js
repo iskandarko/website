@@ -14,20 +14,21 @@ function switchLanguage(language) {
     } else {
         console.log(language + " language is nor supported!");
     }
+
+    function isHidden(element) {
+        return element.classList.contains('hidden');
+    }
+    
+    function isInChosenLanguage(element, language) {
+        return element.hasAttribute(language);
+    }
+    
+    function hide(element) {
+        element.classList.add('hidden');
+    }
+    
+    function unhide(element) {
+        element.classList.remove('hidden');
+    }
 }
 
-function isHidden(element) {
-    return element.classList.contains('hidden');
-}
-
-function isInChosenLanguage(element, language) {
-    return element.hasAttribute(language);
-}
-
-function hide(element) {
-    element.classList.add('hidden');
-}
-
-function unhide(element) {
-    element.classList.remove('hidden');
-}
