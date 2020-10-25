@@ -226,14 +226,12 @@ ul, li, ol{
 xclip 
 
 -------------------------------- */
-.cd-headline.clip span {
-  display: inline-block;
+.cd-headline.clip{
+  /* display: inline-block; */
   padding: .2em 0;
   color: #ffffff;
   font-size: 30px;
-}
-.cd-headline.clip span b{
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 .cd-headline.clip .cd-words-wrapper {
   overflow: hidden;
